@@ -24,7 +24,7 @@ public class Services {
 	
 	public List<Product> showp(Product prd){
 		return rep.findAll();
-	}
+ 	}
 
 	public Product showbyid(int prd) {
 		return rep.findById(prd).get();
@@ -44,7 +44,11 @@ public class Services {
 	    }
 		return null;
 	}
-
+  
+	
+	public void delete(int id) {
+		rep.deleteById(id);
+	}
 	
 	public List<ProductResponseDto> showonly(Product prd) {
 	 
